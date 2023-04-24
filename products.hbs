@@ -3,16 +3,15 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} tag of the default.hbs template --}}
 
-
-{{#post}}
-{{!-- Everything inside the #post block pulls data from the page --}}
-
 <main id="site-main" class="site-main">
+
+{{#tag}}
+{{!-- Everything inside the #post block pulls data from the page --}}
 <article class="article {{post_class}}">
 
     <header class="article-header gh-canvas">
 
-        <h1 class="article-title">{{title}}</h1>
+        <h1 class="article-title">{{name}}</h1>
 
         {{#if feature_image}}
             <figure class="article-image">
@@ -35,11 +34,22 @@ into the {body} tag of the default.hbs template --}}
 
     </header>
 
-    <section class="gh-content gh-canvas">
-        {{content}}
-    </section>
-
 </article>
-</main>
+{{/tag}}
 
-{{/post}}
+
+<section class="inner posts">
+
+    <div class="post-feed">
+        {{#foreach posts}}
+            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+            {{> "post-card"}}
+        {{/foreach}}
+    </div>
+
+    {{pagination}}
+
+</section>
+
+
+</main>
