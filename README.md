@@ -1,14 +1,10 @@
 # Casper
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Casper! If you're just looking to download the latest release, head over to the [releases](https://github.com/TryGhost/Casper/releases) page.
+The default theme for [lgm.ltd](http://lgm.ltd/), based on Ghost's Casper.
 
-&nbsp;
+If you're just looking for that, head over to their [releases](https://github.com/TryGhost/Casper/releases) page.
 
-![screenshot-desktop](https://user-images.githubusercontent.com/1418797/183329195-8e8f2ee5-a473-4694-a813-a2575491209e.png)
-
-&nbsp;
-
-# First time using a Ghost theme?
+# Using a Ghost theme
 
 Ghost uses a simple templating language called [Handlebars](http://handlebarsjs.com/) for its themes.
 
@@ -28,7 +24,6 @@ One neat trick is that you can also create custom one-off templates by adding th
 - `page-about.hbs` - Custom template for an `/about/` page
 - `tag-news.hbs` - Custom template for `/tag/news/` archive
 - `author-ali.hbs` - Custom template for `/author/ali/` archive
-
 
 # Development
 
@@ -56,14 +51,12 @@ yarn zip
 - Autoprefixer - Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.
 - [Color Mod](https://github.com/jonathantneal/postcss-color-mod-function)
 
-
 # SVG Icons
 
 Casper uses inline SVG icons, included via Handlebars partials. You can find all icons inside `/partials/icons`. To use an icon just include the name of the relevant file, eg. To include the SVG icon in `/partials/icons/rss.hbs` - use `{{> "icons/rss"}}`.
 
 You can add your own SVG icons in the same manner.
 
-
 # Copyright & License
 
-Copyright (c) 2013-2022 Ghost Foundation - Released under the [MIT license](LICENSE).
+Copyright (c) 2023 Little Green Man Ltd - Released under the [MIT license](LICENSE).

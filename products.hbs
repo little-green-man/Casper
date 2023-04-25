@@ -5,13 +5,13 @@ into the {body} tag of the default.hbs template --}}
 
 <main id="site-main" class="site-main">
 
-{{#tag}}
+{{#page}}
 {{!-- Everything inside the #post block pulls data from the page --}}
-<article class="article {{post_class}}">
+<article class="article {{post_class}}" style="padding-bottom:1rem">
 
     <header class="article-header gh-canvas">
 
-        <h1 class="article-title">{{name}}</h1>
+        <h1 class="article-title">{{title}}</h1>
 
         {{#if feature_image}}
             <figure class="article-image">
@@ -34,8 +34,13 @@ into the {body} tag of the default.hbs template --}}
 
     </header>
 
+    <section class="gh-content gh-canvas">
+        {{content}}
+    </section>
+
+
 </article>
-{{/tag}}
+{{/page}}
 
 
 <section class="inner posts">

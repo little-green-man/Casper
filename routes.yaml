@@ -1,0 +1,21 @@
+routes:
+
+collections:
+  /products/:
+    permalink: /products/{slug}/
+    template: products
+    filter: tag:hash-product
+    data: page.products
+  /open-source/:
+    permalink: /open-source/{slug}/
+    template: products
+    filter: tag:hash-opensource
+    data: page.open-source
+  /:
+    permalink: /blog/{slug}/
+    template: index
+    filter: tag:-[hash-product,hash-opensource]
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/
